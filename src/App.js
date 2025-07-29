@@ -54,25 +54,25 @@ const Portfolio = () => {
   const courses = [
     {
       id: 'cs101',
-      code: 'CS 101',
-      name: 'Introduction to Computer Science',
-      semester: 'Spring 2025',
-      students: 45,
-      schedule: 'Mon/Wed 10:00 AM - 11:30 AM',
-      description: 'Fundamental concepts of programming and computational thinking',
+      code: '252-0341-01L',
+      name: 'Information Retrieval',
+      semester: 'FS25',
+      room: 'HG F26',
+      schedule: 'Fri 10:00 - 12:00',
+      description: 'Introduction to data retrieval and data storage',
       materials: [
         {
           week: 1,
-          date: '2025-01-20',
-          title: 'Introduction to Programming',
-          description: 'Basic programming concepts and environment setup',
-          slideUrl: '#',
-          topics: ['Variables', 'Data Types', 'Basic I/O']
+          date: '2025-02-28',
+          title: 'Introduction',
+          description: 'No exercise session.',
+          slideUrl: './infret_files/Ex_session_week2.pdf',
+          topics: []
         },
         {
           week: 2,
-          date: '2025-01-27',
-          title: 'Control Structures',
+          date: '2025-03-07',
+          title: 'Boolean Retrieval',
           description: 'Conditionals and loops',
           slideUrl: '#',
           topics: ['If Statements', 'For Loops', 'While Loops']
@@ -84,33 +84,6 @@ const Portfolio = () => {
           description: 'Modular programming concepts',
           slideUrl: '#',
           topics: ['Function Declaration', 'Parameters', 'Return Values']
-        }
-      ]
-    },
-    {
-      id: 'cs201',
-      code: 'CS 201',
-      name: 'Data Structures and Algorithms',
-      semester: 'Spring 2025',
-      students: 38,
-      schedule: 'Tue/Thu 2:00 PM - 3:30 PM',
-      description: 'Advanced programming concepts with focus on efficiency',
-      materials: [
-        {
-          week: 1,
-          date: '2025-01-21',
-          title: 'Arrays and Lists',
-          description: 'Linear data structures fundamentals',
-          slideUrl: '#',
-          topics: ['Arrays', 'Linked Lists', 'Dynamic Arrays']
-        },
-        {
-          week: 2,
-          date: '2025-01-28',
-          title: 'Stacks and Queues',
-          description: 'LIFO and FIFO data structures',
-          slideUrl: '#',
-          topics: ['Stack Operations', 'Queue Operations', 'Applications']
         }
       ]
     }
@@ -159,8 +132,8 @@ const Portfolio = () => {
             <span>{course.schedule}</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="opacity-50">students:</span>
-            <span>{course.students}</span>
+            <span className="opacity-50">room:</span>
+            <span>{course.room}</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="opacity-50">materials:</span>
@@ -441,6 +414,7 @@ const Portfolio = () => {
                   <p className={`text-lg ${themeClasses.text.secondary}`}>
                     {selectedCourse.name}
                   </p>
+
                 </div>
                 
                 <div className="space-y-6">
